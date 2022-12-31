@@ -1,0 +1,123 @@
+#homePage {
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+
+    .wrapper {
+        padding-left:100px;
+        padding-right: 100px;
+        @media screen and (max-width: 640px) {
+            padding: 0 18px;
+        }
+        height: 100vh;
+
+        .stat{
+            width: 100%;
+            padding: 30px;
+            font-size: 1.3rem;
+            border-radius: 20px;
+            background-image: linear-gradient(0.75turn, rgba(40, 55, 79, 0), rgb(40, 55, 79));
+            .progress-bar{
+                display: block;
+                height: 20px;
+                background-color: rgb(41, 85, 110);
+                position: relative;
+                border-radius: 5px;
+                overflow: hidden;
+
+                >span{
+                    height: 100%;
+                    display: inline-block;
+                    background-color: antiquewhite;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                margin-top: 30px;       
+            }
+        }
+        
+    }
+
+    .links{
+        position: fixed;
+        top: 30px;
+        right: 40px;
+        display: flex;
+        gap: 20px;
+        img{
+            height: 25px;
+        }
+    }
+    
+    .bg {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        .tribe-img{
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+
+        .fire {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(./assets/bg/fire.gif);
+            width: 128px;
+            height: 160px;
+            background-size: 100% 100%;
+            mix-blend-mode: screen;
+        }
+
+        .fire-wood {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(./assets/bg/firewood.png);
+            width: 148px;
+            height: 60px;
+            background-size: contain;
+            background-position: center center;
+        }
+
+        .pepe-fry {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            width: 112px;
+            height: 140px;
+            transform: translateX(-50%);
+            background-size: contain;
+            background-position: center;
+            background-image: url(./assets/bg/pepe-fry.png);
+        }
+        @media only screen and (max-width: 640px) {
+            .fire {
+                bottom: 10px;
+                width: 64px;
+                height: 80px;
+            }
+    
+            .fire-wood {
+                bottom: -10px;
+                width: 74px;
+                height: 30px;
+            }
+    
+            .pepe-fry {
+                bottom: 40px;
+                width: 56px;
+                height: 70px;
+            }
+        }
+
+    }
+}
